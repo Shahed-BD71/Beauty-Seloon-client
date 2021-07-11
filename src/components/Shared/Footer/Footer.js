@@ -7,30 +7,30 @@ const devName = "SA-Shahed";
 
 const Footer = () => {
   const noNamed = [
-      {name: "Emergency Dental Care", link: '/emergency'},   
-      {name: "Check Up", link: '/checkup'},   
-      {name: "Treatment of Personal Diseases", link: '/personal-treatment'},   
-      {name: "Tooth Extraction", link: '/tooth-extract'},   
-      {name: "Check Up", link: '/checkup'}    
-  ]
+    { name: "Emergency Facial Care", link: "/emergency" },
+    { name: "Make Up", link: "/makeup" },
+    { name: "Treatment of Facial Diseases", link: "/facial-treatment" },
+    { name: "Body Wraps", link: "/body-wraps" },
+    { name: "Make Up", link: "/makeup" },
+  ];
   const services = [
-      {name: "Emergency Dental Care", link: '/emergency'},   
-      {name: "Check Up", link: '/checkup'},   
-      {name: "Treatment of Personal Diseases", link: '/personal-treatment'},   
-      {name: "Tooth Extraction", link: '/tooth-extract'},   
-      {name: "Check Up", link: '/checkup'},  
-      {name: "Check Up", link: '/checkup'},  
-      {name: "Check Up", link: '/checkup'}  
-  ]
+    { name: "Emergency Facial Care", link: "/emergency" },
+    { name: "Make Up", link: "/makeup" },
+    { name: "Treatment of Facial Diseases", link: "/facial-treatment" },
+    { name: "Body Wraps", link: "/body-wraps" },
+    { name: "Make Up", link: "/makeup" },
+    { name: "Make Up", link: "/makeup" },
+    { name: "Make Up", link: "/makeup" },
+  ];
   const oralHealth = [
-      {name: "Emergency Dental Care", link: '/emergency'},   
-      {name: "Check Up", link: '/checkup'},   
-      {name: "Treatment of Personal Diseases", link: '/personal-treatment'},   
-      {name: "Tooth Extraction", link: '/tooth-extract'},   
-      {name: "Check Up", link: '/checkup'},  
-      {name: "Check Up", link: '/checkup'},  
-      {name: "Check Up", link: '/checkup'}  
-  ]
+    { name: "Emergency Facial Care", link: "/emergency" },
+    { name: "Make Up", link: "/makeup" },
+    { name: "Treatment of Facial Diseases", link: "/facial-treatment" },
+    { name: "Body Wraps", link: "/body-wraps" },
+    { name: "Make Up", link: "/makeup" },
+    { name: "Make Up", link: "/makeup" },
+    { name: "Make Up", link: "/makeup" },
+  ];
    const ourAddress = [
       {name: "New York - 101010 Hudson" , link: "//google.com/map"},
       {name: "Yards" , link: "//google.com/map"}
@@ -75,7 +75,7 @@ const Footer = () => {
                  </ul>
                  <div className="mt-5">
                    <h6>Call now</h6>
-                   <button className="btn btn-primary">+2025550295</button>
+                   <button className="btn btn-brand w-75">+2025550295</button>
                  </div>
                </FooterCol>
              </div>

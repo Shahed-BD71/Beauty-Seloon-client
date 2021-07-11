@@ -20,6 +20,10 @@
     color:white;
 }
 
+.social-media .icon:hover {
+    color: #f36868;
+    text-decoration: none;
+}
 
 /* clearfix */
 .group:before,

@@ -9,11 +9,11 @@ const HeaderMain = () => {
         className="row d-flex px-5 align-items-center header-container"
       >
         <div className="col-md-4 offset-md-1">
-          <h1 style={{color: "#eb079f"}} className="fw-bolder">
+          <h1 style={{ color: "#7ef5b5" }} className="fw-bolder">
             Your New Look <br />
             Starts Here
           </h1>
-          <p className="text-primary">
+          <p className="text-light">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
             pariatur at est vero nihil odio dolorum illum dolor soluta sequi!
           </p>
