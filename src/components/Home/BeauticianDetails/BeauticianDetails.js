@@ -12,20 +12,20 @@ import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 const BeauticianDetails = ({team}) => {
    return (
-     <div class="col-md-3 pb-4">
-       <div class="team-member shadow-sm rounded">
-         <figure class="effect-zoe p-1">
+     <div className="col-md-3 pb-4">
+       <div className="team-member shadow-sm rounded">
+         <figure className="effect-zoe p-1">
            <div>
              <img className="img-fluid" src={team.img} alt="" />
            </div>
-           <div class="team-attrs fw-bold mt-4 mb-4">
-             <div class="text-brand team-name">
+           <div className="team-attrs fw-bold mt-4 mb-4">
+             <div className="text-brand team-name">
                {team.name}
              </div>
              <div className="">{team.position}</div>
            </div>
            <figcaption className="">
-             <p class="icon-links">
+             <p className="icon-links">
                <a href="#!">
                  <FontAwesomeIcon icon={faFacebook} />
                  {team.fb}
@@ -40,7 +40,7 @@ const BeauticianDetails = ({team}) => {
                </a>
              </p>
 
-             <p class="phone-number">
+             <p className="phone-number">
                <a href="#!">
                  <FontAwesomeIcon icon={faPhone} className="" /> tel: 1 234 567-89-10
                </a>
@@ -48,7 +48,7 @@ const BeauticianDetails = ({team}) => {
            </figcaption>
          </figure>
        </div>
-       <div class="dividewhite4"></div>
+       <div className="dividewhite4"></div>
      </div>
    );
 };

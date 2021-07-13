@@ -6,9 +6,9 @@ const FashionGallery = ({fashion}) => {
     <div className="col-md-4">
       <div className="content my-2">
         <div className="content-overlay"></div>
-        <img class="content-image" src={fashion.img} alt="" />
-        <div class="content-details fadeIn-bottom">
-          <h3 class="content-title">View Details</h3>
+        <img className="content-image" src={fashion.img} alt="" />
+        <div className="content-details fadeIn-bottom">
+          <h3 className="content-title">View Details</h3>
         </div>
       </div>
     </div>

@@ -4,18 +4,18 @@ import NavLogo from "../../../images/beauty-seloon.jpg"
 import './Navbar.css'
 
 
-const Navbar = () => {
+const Navbar = ({countCartItems}) => {
   return (
     <nav
       style={{ backgroundColor: "rgb(37, 150, 190)" }}
       className="navbar navbar-expand-lg navbar-dark"
     >
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          Beauty Seloon
+      <div className="container-fluid">
+        <a className="navbar-brand ms-3" href="#">
+          Beauty Saloon
         </a>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNavAltMarkup"
@@ -23,12 +23,12 @@ const Navbar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <ul className="navbar-nav ms-auto hover-nav fw-bolder">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="#">
+              <Link className="nav-link active" aria-current="page" to="/">
                 Home
               </Link>
             </li>
@@ -43,8 +43,8 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-dark" to="#">
-                Reviews
+              <Link className="nav-link text-dark" to="/shop">
+                Shop
               </Link>
             </li>
             <li className="nav-item">
@@ -55,6 +55,23 @@ const Navbar = () => {
             <li className="nav-item">
               <Link className="nav-link text-dark" href="#">
                 Contact Us
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link text-dark" to="login">
+                Sign Up
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link text-dark" to="/shop">
+                Cart{" "}
+                {countCartItems ? (
+                  <button className="btn-sm fw-bolder btn btn-warning">
+                    {countCartItems}
+                  </button>
+                ) : (
+                  ""
+                )}
               </Link>
             </li>
           </ul>

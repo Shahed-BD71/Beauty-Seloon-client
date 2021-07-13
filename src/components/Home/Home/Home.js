@@ -12,7 +12,7 @@ import Footer from "../../Shared/Footer/Footer"
 
 const Home = () => {
    return (
-     <div>
+     <main>
        <Navbar/>
        <Header />
        <FeaturedService />
@@ -23,7 +23,7 @@ const Home = () => {
        <Beautician/>
        <Subscribe/>
        <Footer/>
-     </div>
+     </main>
    );
 };
 

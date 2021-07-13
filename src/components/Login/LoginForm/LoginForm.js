@@ -26,7 +26,9 @@ const LoginForm = ({email, password,setEmail, setPassword, handleLogIn, handleSi
          <div className="btnContainer">
            {hasAccount ? (
              <div>
-               <button onClick={handleLogIn}>Sign In</button>
+               <button className="btn-login" onClick={handleLogIn}>
+                 Sign In
+               </button>
                <p className="text-center">
                  Don't have an account ?{" "}
                  <span onClick={() => setHasAccount(!hasAccount)}>Sign Up</span>
@@ -34,7 +36,9 @@ const LoginForm = ({email, password,setEmail, setPassword, handleLogIn, handleSi
              </div>
            ) : (
              <div>
-               <button onClick={handleSignUp}>Sign Up</button>
+               <button className="btn-login" onClick={handleSignUp}>
+                 Sign Up
+               </button>
                <p className="text-center">
                  Already have an account ?{" "}
                  <span onClick={() => setHasAccount(!hasAccount)}>Login</span>

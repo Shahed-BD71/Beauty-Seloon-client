@@ -34,57 +34,49 @@ const Footer = () => {
    const ourAddress = [
       {name: "New York - 101010 Hudson" , link: "//google.com/map"},
       {name: "Yards" , link: "//google.com/map"}
-
-    ]
-   
-
-       return (
-         <footer className="footer-area group">
-           <div className="container pt-5">
-             <div className="row py-5">
-               <FooterCol key={1} menuTitle={"."} menuItems={noNamed} />
-               <FooterCol key={2} menuTitle="Services" menuItems={services} />
-               <FooterCol
-                 key={3}
-                 menuTitle="Oral Health"
-                 menuItems={oralHealth}
-               />
-               <FooterCol
-                 key={4}
-                 menuTitle="Our Address"
-                 menuItems={ourAddress}
-               >
-                 <ul className="social-media list-inline">
-                   <li className="list-inline-item">
-                     <a href="//facebook.com">
-                       <FontAwesomeIcon
-                         className="icon active-icon"
-                         icon={faFacebook}></FontAwesomeIcon>
-                     </a>
-                   </li>
-                   <li className="list-inline-item">
-                     <a href="//google.com">
-                       <FontAwesomeIcon className="icon" icon={faGooglePlus} />
-                     </a>
-                   </li>
-                   <li className="list-inline-item">
-                     <a href="//instagram.com">
-                       <FontAwesomeIcon className="icon" icon={faInstagram} />
-                     </a>
-                   </li>
-                 </ul>
-                 <div className="mt-5">
-                   <h6>Call now</h6>
-                   <button className="btn btn-brand w-75">+2025550295</button>
-                 </div>
-               </FooterCol>
+  ]
+   return (
+     <footer className="footer-area group">
+       <div className="container pt-5">
+         <div className="row py-5">
+           <FooterCol key={1} menuTitle={"."} menuItems={noNamed} />
+           <FooterCol key={2} menuTitle="Services" menuItems={services} />
+           <FooterCol key={3} menuTitle="Oral Health" menuItems={oralHealth} />
+           <FooterCol key={4} menuTitle="Our Address" menuItems={ourAddress}>
+             <ul className="social-media list-inline">
+               <li className="list-inline-item">
+                 <a href="//facebook.com">
+                   <FontAwesomeIcon
+                     className="icon active-icon"
+                     icon={faFacebook}
+                   ></FontAwesomeIcon>
+                 </a>
+               </li>
+               <li className="list-inline-item">
+                 <a href="//google.com">
+                   <FontAwesomeIcon className="icon" icon={faGooglePlus} />
+                 </a>
+               </li>
+               <li className="list-inline-item">
+                 <a href="//instagram.com">
+                   <FontAwesomeIcon className="icon" icon={faInstagram} />
+                 </a>
+               </li>
+             </ul>
+             <div className="mt-5">
+               <h6>Call now</h6>
+               <button className="btn btn-brand w-75">+2025550295</button>
              </div>
-             <div className="copyRight text-center">
-               <p>Copyright {new Date().getFullYear()} {devName}, All Rights Reserved</p>
-             </div>
-           </div>
-         </footer>
-       );
+           </FooterCol>
+         </div>
+         <div className="copyRight text-center">
+           <p>
+             Copyright {new Date().getFullYear()} {devName}, All Rights Reserved
+           </p>
+         </div>
+       </div>
+     </footer>
+   );
 };
 
 export default Footer;

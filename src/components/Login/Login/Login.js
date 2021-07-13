@@ -6,6 +6,7 @@ import firebaseConfig from "./firebase.config";
 import './Login.css';
 import LoginForm from '../LoginForm/LoginForm';
 import LogOut from './LogOut';
+import Navbar from '../../Shared/Navbar/Navbar'
 
 
 //  const initializeLoginFramework = () => {
@@ -15,7 +16,7 @@ import LogOut from './LogOut';
 //  };
 
 
-   firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 const Login = () => {
   const [user, setUser] = useState('');
   const [email, setEmail] = useState('');
@@ -96,6 +97,7 @@ const Login = () => {
 
   return (
     <div>
+      <Navbar></Navbar>
       {user ? (
         <LogOut handleLogOut={handleLogOut}></LogOut>
       ) : (

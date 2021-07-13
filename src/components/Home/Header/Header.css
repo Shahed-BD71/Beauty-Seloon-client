@@ -14,20 +14,5 @@
     height: 100%;
     background: rgb(12, 11, 27);
     opacity: .8;
-    z-index: -9;
-    margin-left: -40px;
-}
-
-
-
-/* 
-.header-container::after {
-    height: 600px;
-    content:'';
-    position: absolute;
-    top: 0;
-    width: 30%;
-    right: 0;
-    background-color: #928d92;
-    z-index: -10;
-} */
+    z-index: -9; 
+};

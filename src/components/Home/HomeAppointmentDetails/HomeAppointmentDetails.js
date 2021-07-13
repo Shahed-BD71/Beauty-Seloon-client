@@ -3,17 +3,17 @@ import './HomeAppointmentDetails.css'
 
 const HomeAppointmentDetails = ({appointment}) => {
   return (
-     <div class="card-wrapper col-md-2">
-      <div class="card">
-        <div class="card-img-wrapper">
-          <img class="img-fluid" src={appointment.img} alt=""
+     <div className="card-wrapper col-md-2">
+      <div className="card">
+        <div className="card-img-wrapper">
+          <img className="img-fluid" src={appointment.img} alt=""
           />
         </div>
-        <div class="card-body">
-          <h5 class="card-title">{appointment.name}</h5>
-          <div class="card-content">
-            <p class="card-text">{appointment.description}</p>
-            <a href="#" class="btn btn-brand">Appointment</a>
+        <div className="card-body">
+          <h5 className="card-title">{appointment.name}</h5>
+          <div className="card-content">
+            <p className="card-text">{appointment.description}</p>
+            <a href="#" className="btn btn-brand">Appointment</a>
           </div>
         </div>
       </div>

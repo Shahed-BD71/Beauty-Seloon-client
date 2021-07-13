@@ -5,7 +5,9 @@ const LogOut = ({handleLogOut}) => {
     <section>
       <nav>
         <h3>Welcome</h3>
-        <button onClick={handleLogOut}>Logout</button>
+        <button className="btn-login" onClick={handleLogOut}>
+          Logout
+        </button>
       </nav>
     </section>
   );

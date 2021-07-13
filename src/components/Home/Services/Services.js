@@ -54,15 +54,15 @@ const servicesData = [
 
 const Services = () => {
   return (
-    <section className="mt-5">
+    <section className="mt-5 mb-5">
       <div className="text-center">
         <h5 style={{ color: "black", fontWeight: "1000" }}>OUR SERVICES</h5>
         <h2 style={{ color: "#d130c1", fontWeight: "700" }}>
           Services We Provide
         </h2>
       </div>
-      <div className="d-flex mt-5 mx-5 justify-content-center">
-        <div className="row">
+      <div className="d-flex mt-5">
+        <div className="row mx-2 justify-content-center">
           {servicesData.map((service) => (
             <ServiceDetails
               service={service}

@@ -12,7 +12,7 @@ const FeaturedService = () => {
           <div className="col-md-5">
             <img className="img-fluid rounded" src={Featured} alt=""></img>
           </div>
-          <div className="col-md-7 align-self-center">
+          <div className="col-md-7 my-4 align-self-center">
             <h2 className="text-brand fw-bolder">Story Behind Beauty</h2>
             <p className="text-secondary my-3 me-4 pe-5">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -25,7 +25,7 @@ const FeaturedService = () => {
               <li>Quick Customer Services</li>
               <li>Quality Services Ensure</li>
               <li>Professional Team</li>
-              <button className="btn btn-brand w-25 mt-3">Learn More</button>
+              <button className="btn btn-brand w-50 mt-3">Learn More</button>
             </ul>
           </div>
         </div>
