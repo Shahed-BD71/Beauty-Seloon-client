@@ -1,28 +1,46 @@
-import React from "react";
-import './Cart.css'
+import React, { useState, useEffect} from "react";
+import {
+  getDatabaseCart,
+} from "../../../utilities/databaseManager.js";
+import "./Cart.css";
+import { useHistory } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlusCircle, faMinusCircle } from "@fortawesome/free-solid-svg-icons";
 
-const Cart = ({cartItems, addProduct, removeProduct}) => {
-  const itemsPrice = cartItems.reduce((a, c) => a + c.price*c.qty, 0);
-  const taxPrice = itemsPrice* 0.15;
-  const shippingPrice = itemsPrice > 2000 ? 0 : 100;
+const Cart = ({ cartItems, addProduct, removeProduct }) => {
+  // const [cart, setCart] = useState([]);
+  // const savedCart = getDatabaseCart();
+  const history = useHistory();
+
+  const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
+  const taxPrice = itemsPrice * 0.15;
+  const shippingPrice = itemsPrice > 2000 ? 0 : 10;
   const totalPrice = itemsPrice + taxPrice + shippingPrice;
 
+  const handleProceedCheckout = () => {
+    history.push("/shipment");
+  };
+
+  // ...
+
   return (
-    <aside className="col-md-4 mt-5 rounded">
+    <aside className="col-md-4 col-5 cart mt-5 rounded">
       <h5 className="text-center fw-bold text-brand">Your Shopping Details</h5>
       <h5 className="text-center">
         {cartItems.length === 0 && <p>Cart is Empty</p>}
       </h5>
-      <div className="bg-light p-2 rounded">
+      <div className="bg-light rounded">
         {cartItems.map((item) => (
           <div className="row p-2">
             <hr></hr>
             <div className="col-md-7">{item.name}</div>
             <div
-              style={{ backgroundColor: "#c9f0c2" }}
-              className="text-center h-50 col-4 col-md-4 rounded justify-content-between"
+              style={{
+                backgroundColor: "#c9f0c2",
+                width: "8rem",
+                height: "3rem",
+              }}
+              className="text-center justify-content-center rounded"
             >
               <button
                 className="m-2"
@@ -47,8 +65,8 @@ const Cart = ({cartItems, addProduct, removeProduct}) => {
                 <FontAwesomeIcon icon={faPlusCircle}></FontAwesomeIcon>
               </button>
             </div>
-            <div>
-              {item.qty} * ${item.price.toFixed(2)}
+            <div className="fw-bold mt-1">
+              {item.qty} * ${item.price}
             </div>
           </div>
         ))}
@@ -72,10 +90,10 @@ const Cart = ({cartItems, addProduct, removeProduct}) => {
               <div className="col-md-8">Total Price:</div>
               <div className="col-md-4">${totalPrice.toFixed(2)}</div>
             </div>
-            <div className="row mt-3">
+            <div className="row ms-2 me-2 mt-3">
               <button
                 className="btn fw-bold btn-warning"
-                onClick={() => alert("Show me your Balance")}
+                onClick={handleProceedCheckout}
               >
                 Checkout Now
               </button>

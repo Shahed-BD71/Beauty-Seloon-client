@@ -41,7 +41,7 @@ const appointmentData = [
 
 const HomeAppointment = () => {
  return (
-   <section className="mt-5 py-3">
+   <section className="mt-5 mb-5">
      <div className="text-center">
        <h5 style={{ color: "black", fontWeight: "1000" }}>GET APPOINTMENT</h5>
        <h2 style={{ color: "#20d49e", fontWeight: "700" }}>
@@ -49,7 +49,7 @@ const HomeAppointment = () => {
        </h2>
      </div>
      <div className="mt-4">
-       <div className="row d-flex mx-5 justify-content-center">
+       <div className="row d-flex justify-content-center">
          {appointmentData.map((appointment) => (
            <HomeAppointmentDetails
              appointment={appointment}

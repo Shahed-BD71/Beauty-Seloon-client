@@ -8,7 +8,7 @@ const FashionGallery = ({fashion}) => {
         <div className="content-overlay"></div>
         <img className="content-image" src={fashion.img} alt="" />
         <div className="content-details fadeIn-bottom">
-          <h3 className="content-title">View Details</h3>
+          <h4 className="content-title">View Details</h4>
         </div>
       </div>
     </div>

@@ -5,7 +5,7 @@ const FeaturedService = () => {
   return (
     <section
       styles={{ color: "#bcebc3" }}
-      className="features-service pb-0 pb-md-5 py-5 my-5"
+      className="features-service pb-0 pb-md-5 my-5"
     >
       <div className="container mt-5">
         <div className="row">

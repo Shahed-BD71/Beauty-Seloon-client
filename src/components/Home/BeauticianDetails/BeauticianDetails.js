@@ -1,5 +1,6 @@
 import React from 'react';
 import "./BeauticianDetails.css"
+import { Link } from "react-router-dom"; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPhone,
@@ -10,39 +11,38 @@ import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 
 
-const BeauticianDetails = ({team}) => {
+const BeauticianDetails = ({artist}) => {
    return (
      <div className="col-md-3 pb-4">
-       <div className="team-member shadow-sm rounded">
+       <div className="artist-member shadow-sm rounded">
          <figure className="effect-zoe p-1">
            <div>
-             <img className="img-fluid" src={team.img} alt="" />
+             <img
+               className="img-fluid"
+               src={`data:image/png;base64,${artist.image.img}`}
+               alt=""
+             />
            </div>
-           <div className="team-attrs fw-bold mt-4 mb-4">
-             <div className="text-brand team-name">
-               {team.name}
-             </div>
-             <div className="">{team.position}</div>
+           <div className="artist-attr mt-4 mb-4">
+             <h5 className="text-brand artist-name">{artist.name}</h5>
+             <span className="fst-italic">{artist.position}</span>
            </div>
            <figcaption className="">
              <p className="icon-links">
-               <a href="#!">
+               <Link to={artist.facebook}>
                  <FontAwesomeIcon icon={faFacebook} />
-                 {team.fb}
-               </a>
-               <a href="#!">
+               </Link>
+               <Link to={artist.instagram}>
                  <FontAwesomeIcon icon={faInstagram} />
-                 {team.instagram}
-               </a>
-               <a href="#!">
-                 <FontAwesomeIcon icon={faEnvelope} className= "icon"/>
-                 {team.email}
-               </a>
+               </Link>
+               <Link>
+                 <FontAwesomeIcon icon={faEnvelope}  />
+               </Link>
              </p>
-
              <p className="phone-number">
-               <a href="#!">
-                 <FontAwesomeIcon icon={faPhone} className="" /> tel: 1 234 567-89-10
+               <a>
+                 <FontAwesomeIcon icon={faPhone} className="" />
+                 {artist.phone}
                </a>
              </p>
            </figcaption>

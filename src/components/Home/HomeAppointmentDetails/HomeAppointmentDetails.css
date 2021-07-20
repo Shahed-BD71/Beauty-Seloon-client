@@ -1,14 +1,14 @@
-.card-wrapper {
+/* .card-wrapper {
   margin-bottom: 30px;
-}
-.card-image .card .card-img-wrapper {
+} */
+/* .card-image .card .card-img-wrapper {
   height: 100%;
-}
-.card-image .card .card-body {
+} */
+/* .card-image .card .card-body {
   display: none;
-}
-.card-image-title-description .card .card-img-wrapper {
-  max-height: 60px;
+} */
+/* .card-image-title-description .card .card-img-wrapper {
+  max-height: 200px;
 }
 .card-image-title-description .card {
   position: relative;
@@ -21,49 +21,58 @@
   margin-bottom: -70px;
 }
 .card-image-title-description .card:hover .card-body {
-  top: -70px;
-}
+  top: -40px;
+} 
 .card-image-title-description .card .card-body .card-title {
-  margin-bottom: .15rem;
-}
-.card {
-  display: inline-block;
-  position: relative;
+  margin-bottom: 1.55rem;
+} */
+.home-app .card {
   overflow: hidden;
-  min-height: 400px;
-  width: 110%;
-  height: 80%;
 }
-.card:hover {
+.home-app .card:hover {
   box-shadow: 8px 12px 31px -10px #ab98ab;
 }
-.card-img-wrapper {
-  height: 65%;
+.home-app .card-img-wrapper {
+  height: 100%;
   overflow: hidden;
 }
-.card-img-wrapper img {
+.home-app .card-img-wrapper img {
   transition: 1.5s ease;
 }
-.card:hover .card-img-wrapper img {
+.home-app .card:hover .card-img-wrapper img {
   transform: scale(1.15);
 }
-.card-body .card-title {
+.home-app .card-body .card-title {
   transition: 1.5s ease;
 }
-.card:hover .card-body .card-title {
+.home-app .card:hover .card-body .card-title {
   margin-bottom: .08rem;
 }
 
-.card-body {
+.home-app .card-body {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 28%;
+  height: 25%;
   background-color: #fff;
   transition: 1.5s ease;
 }
-.card-content {
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .home-app .card-body {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   height: 16%;
+   background-color: #fff;
+   transition: 1.5s ease;
+  }
+}
+
+.home-app .card-content {
   left: 0;
   right: 0;
   overflow: hidden;
@@ -71,9 +80,18 @@
   height: auto;
   transition: 1.5s ease;
 }
-.card:hover .card-body {
-  height: 53%;
+.home-app .card:hover .card-body {
+  height: 68%;
 }
-.card:hover .card-content {
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+.home-app .card:hover .card-body {
+   height: auto;
+  }
+}
+
+
+.home-app .card:hover .card-content {
   bottom: 0;
 }

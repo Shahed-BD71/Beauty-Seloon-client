@@ -7,11 +7,11 @@ import Product from "../Product/Product";
 const Shop = () => {
   const [cartItems,setCartItems] = useState([]);
   const addProduct = (pd) => {
-    const hasProduct = cartItems.find(x => x.id === pd.id);
+    const hasProduct = cartItems.find(x => x._id === pd._id);
     if (hasProduct) {
       setCartItems(
         cartItems.map((x) =>
-          x.id === pd.id ? { ...hasProduct, qty: hasProduct.qty + 1 } : x
+          x._id === pd._id ? { ...hasProduct, qty: hasProduct.qty + 1 } : x
         )
       );
     }else {
@@ -20,13 +20,13 @@ const Shop = () => {
   };
   
   const removeProduct = (pd) => {
-    const hasProduct = cartItems.find((x) => x.id === pd.id);
+    const hasProduct = cartItems.find((x) => x._id === pd._id);
     if (hasProduct.qty === 1) {
-      setCartItems(cartItems.filter((x) => x.id !==pd.id));
+      setCartItems(cartItems.filter((x) => x._id !==pd._id));
     }else{
       setCartItems(
         cartItems.map((x) =>
-          x.id === pd.id ? { ...hasProduct, qty: hasProduct.qty - 1 } : x
+          x._id === pd._id ? { ...hasProduct, qty: hasProduct.qty - 1 } : x
         )
       );
     }
@@ -37,7 +37,7 @@ const Shop = () => {
     <main className="">
       <Navbar countCartItems={cartItems.length}></Navbar>
       <div className="container">
-        <div className="row d-flex justify-content-between">
+        <div className="row justify-content-between d-flex">
           <Product addProduct={addProduct}></Product>
           <Cart cartItems={cartItems} addProduct={addProduct} removeProduct={removeProduct}></Cart>
           <Footer/>

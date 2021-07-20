@@ -2,17 +2,18 @@ import React from 'react';
 import './ProductDetails.css'
 
 const ProductDetails = ({pd, addProduct}) => {
+
   return (
-    <div className="m-5">
+    <div className="m-3">
       <img
-        className="pd-img p-3 img-fluid mx-auto rounded d-block"
-        src={pd.image}
+        className="pd-img img-fluid mx-auto rounded"
+        src={`data:image/png;base64,${pd.image.img}`}
         alt={pd.name}
       ></img>
       <h3 className="py-3">{pd.name}</h3>
-      <small className="">{pd.description}</small>
+      <small className="me-5">{pd.description}</small>
       <div className="my-2">
-        <span className="fw-bolder">Price: ${pd.price}.00</span>
+        <span className="fw-bolder">Price: ${(pd.price)}</span>
         <br></br>
         <button
           onClick={() => addProduct(pd)}

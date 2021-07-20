@@ -1,6 +1,8 @@
 .footer-area{
     background-image: url(../../../images/footerBG.png);
     background-size: cover;
+    position: relative;
+    margin-right: 0px;
 }
 
 .footer-area li{

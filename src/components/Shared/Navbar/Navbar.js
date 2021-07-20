@@ -1,19 +1,23 @@
 import React from "react";
-import { Link } from 'react-router-dom'
-import NavLogo from "../../../images/beauty-seloon.jpg"
+import { NavLink } from 'react-router-dom'
 import './Navbar.css'
+import { useContext } from "react";
+import { UserContext } from "../../../App";
 
+// const user = JSON.parse(localStorage.getItem('user-info'))
 
-const Navbar = ({countCartItems}) => {
+const Navbar = ({ countCartItems, name, handleLogOut}) => {
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  let userName = loggedInUser.name;
   return (
     <nav
       style={{ backgroundColor: "rgb(37, 150, 190)" }}
       className="navbar navbar-expand-lg navbar-dark"
     >
       <div className="container-fluid">
-        <a className="navbar-brand ms-3" href="#">
+        <NavLink className="navbar-brand ms-3" to="#">
           Beauty Saloon
-        </a>
+        </NavLink>
         <button
           className="navbar-toggler"
           type="button"
@@ -28,42 +32,77 @@ const Navbar = ({countCartItems}) => {
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <ul className="navbar-nav ms-auto hover-nav fw-bolder">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/">
+              <NavLink
+                className="nav-link active"
+                aria-current="page"
+                exact
+                to="/"
+              >
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-dark" to="#">
+              <NavLink className="nav-link active text-dark" exact to="/appointment">
                 About
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-dark" to="dashboard">
+              <NavLink
+                className="nav-link active text-dark"
+                exact
+                to="dashboard"
+              >
                 Dashboard
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-dark" to="/shop">
+              <NavLink className="nav-link text-dark active" exact to="/shop">
                 Shop
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-dark" href="#">
+              <NavLink className="nav-link active text-dark" exact to="/shipment">
                 Blogs
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-dark" href="#">
+              <NavLink className="nav-link active text-dark" exact to="#">
                 Contact Us
-              </Link>
+              </NavLink>
+            </li>
+            <li class="nav-item dropdown">
+              <NavLink
+                class="nav-link active text-dark dropdown-toggle"
+                to="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                {userName || name ? (
+                  userName || name
+                ) : (
+                  <span>Registration</span>
+                )}
+              </NavLink>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                {userName || name ? (
+                  <li className="">
+                    <NavLink class="dropdown-item" exact to="">
+                      <span onClick={handleLogOut}>Sign Out</span>
+                    </NavLink>
+                  </li>
+                ) : (
+                  <li>
+                    <NavLink class="dropdown-item" exact to="/login">
+                      <span>Sign In</span>
+                    </NavLink>
+                  </li>
+                )}
+              </ul>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-dark" to="login">
-                Sign Up
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link text-dark" to="/shop">
+              <NavLink className="nav-link text-dark" exact to="/shop">
                 Cart{" "}
                 {countCartItems ? (
                   <button className="btn-sm fw-bolder btn btn-warning">
@@ -72,7 +111,7 @@ const Navbar = ({countCartItems}) => {
                 ) : (
                   ""
                 )}
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -82,3 +121,5 @@ const Navbar = ({countCartItems}) => {
 };
 
 export default Navbar;
+
+
