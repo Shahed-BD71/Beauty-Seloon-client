@@ -7,7 +7,7 @@ const AllClients = () => {
   console.log(appointments)
 
   useEffect(() => {
-    fetch("http://localhost:8000/appointments")
+    fetch("https://beauty-saloon.herokuapp.com/appointments")
       .then((res) => res.json())
       .then((data) => setAppointments(data));
   }, []);

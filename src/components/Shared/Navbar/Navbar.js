@@ -43,7 +43,7 @@ const Navbar = ({ countCartItems, name, handleLogOut}) => {
             </li>
             <li className="nav-item">
               <NavLink className="nav-link active text-dark" exact to="/appointment">
-                About
+                Appointment
               </NavLink>
             </li>
             <li className="nav-item">
@@ -61,12 +61,12 @@ const Navbar = ({ countCartItems, name, handleLogOut}) => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link active text-dark" exact to="/shipment">
+              <NavLink className="nav-link active text-dark" exact to="/blogs">
                 Blogs
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link active text-dark" exact to="#">
+              <NavLink className="nav-link active text-dark" exact to="contact">
                 Contact Us
               </NavLink>
             </li>

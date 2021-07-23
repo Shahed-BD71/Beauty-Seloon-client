@@ -15,7 +15,7 @@ const bookingData = [
   },
   {
     id: 3,
-    title: "Cellulite Removal",
+    title: "Sugar Scrubs",
     visitingHour: "5:00 AM – 6:30 PM",
     space: 11,
   },

@@ -18,13 +18,16 @@ import Appointment from './components/Appointment/Appointment/Apoointment';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 import AddArtist from './components/AddArtist/AddArtist';
 import AllClients from './components/AllClients/AllClients';
+import Subscribe from './components/Home/Subscribe/Subscribe';
+import BLogs from './components/Home/Blogs/Blogs';
 
 export const UserContext = createContext();
 
 function App() {
- const [loggedInUser, setLoggedInUser] = useState({});
+ const [loggedInUser, setLoggedInUser, cartItems] = useState({});
+ console.log(cartItems)
   return (
-    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser, cartItems]}>
       <Router>
         <Switch>
           <Route exact path="/">
@@ -39,6 +42,12 @@ function App() {
           <Route exact path="/fancy">
             <FancyCard />
           </Route>
+          <Route exact path="/contact">
+            <Subscribe></Subscribe>
+          </Route>
+          <Route exact path="/blogs">
+            <BLogs/>
+          </Route>
           <Route exact path="/login">
             <Login />
           </Route>
@@ -52,7 +61,7 @@ function App() {
             <AddArtist />
           </Route>
           <PrivateRoute path="/allclients">
-            <AllClients/>
+            <AllClients />
           </PrivateRoute>
           <PrivateRoute exact path="/shipment">
             <Shipment />

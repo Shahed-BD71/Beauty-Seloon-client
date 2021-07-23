@@ -18,7 +18,7 @@ const Sidebar = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   const [isArtist, setIsArtist] = useState(false);
   useEffect(() => {
-    fetch(`http://localhost:8000/isArtist`, {
+    fetch(`https://beauty-saloon.herokuapp.com/isArtist`, {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ email: loggedInUser.email }),
@@ -47,17 +47,17 @@ const Sidebar = () => {
             </li>
             <li>
               <Link to="/doctor/patients" className="text-white">
-                <FontAwesomeIcon icon={faUser} /> <span>Patients</span>
+                <FontAwesomeIcon icon={faUser} /> <span>Clients</span>
               </Link>
             </li>
             <li>
               <Link to="/doctor/prescriptions" className="text-white">
-                <FontAwesomeIcon icon={faFilter} /> <span>Prescriptions</span>
+                <FontAwesomeIcon icon={faFilter} /> <span>Orders</span>
               </Link>
             </li>
             <li>
               <Link to="/addDoctor" className="text-white">
-                <FontAwesomeIcon icon={faUserPlus} /> <span>Add Doctor</span>
+                <FontAwesomeIcon icon={faUserPlus} /> <span>Add An Artist</span>
               </Link>
             </li>
             <li>

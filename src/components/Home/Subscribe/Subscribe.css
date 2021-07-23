@@ -2,9 +2,9 @@
     background-image: url(../../../images/image1.jpg);
     position: relative;
     height:800px;
-    margin-right: 0px;
     background-size: cover;
     z-index: 1;
+    margin-right: 0px;
 }
 
 .subscribe::before{

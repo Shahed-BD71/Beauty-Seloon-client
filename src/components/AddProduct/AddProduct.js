@@ -23,11 +23,11 @@ const AddProduct = () => {
     formData.append("description", product.description);
     formData.append("price", product.price);
 
-    fetch(`http://localhost:8000/addProduct`,{
+    fetch(`https://beauty-saloon.herokuapp.com/addProduct`, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Credentials": true,
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
       },
       body: formData,
     })

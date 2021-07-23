@@ -144,6 +144,7 @@ figure.effect-zoe p.icon-links a:hover {
 figure.effect-zoe p.phone-number a {
     color: rgb(3, 71, 51);
     font-size: 18px;
+    margin-top: 50px;
     font-weight: bolder;
 }
 

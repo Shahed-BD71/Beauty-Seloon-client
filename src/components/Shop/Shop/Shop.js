@@ -6,6 +6,7 @@ import Product from "../Product/Product";
 
 const Shop = () => {
   const [cartItems,setCartItems] = useState([]);
+
   const addProduct = (pd) => {
     const hasProduct = cartItems.find(x => x._id === pd._id);
     if (hasProduct) {
@@ -32,8 +33,15 @@ const Shop = () => {
     }
   }
 
-  return (
+  // fetch(`https://beauty-saloon.herokuapp.com/cartItems`, {
+  //   method: "POST",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //   },
+  //   body: cartItems
+  // })
 
+  return (
     <main className="">
       <Navbar countCartItems={cartItems.length}></Navbar>
       <div className="container">

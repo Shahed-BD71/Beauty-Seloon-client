@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ServiceDetails = ({service}) => {
   return (
@@ -8,7 +9,9 @@ const ServiceDetails = ({service}) => {
       <p className="text-secondary">{service.description}</p>
       <div className="d-flex justify-content-between">
         <span className="fw-bolder">Price: ${service.price}.00</span>
-        <button className="btn btn-brand">Book Now</button>
+        <Link to="/appointment">
+          <button className="btn btn-brand">Book Now</button>
+        </Link>
       </div>
     </div>
   );

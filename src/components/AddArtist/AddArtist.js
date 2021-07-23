@@ -28,8 +28,12 @@ const AddArtist = () => {
     formData.append("instagram", info.instagram);
     formData.append("phone", info.phone);
 
-    fetch(`http://localhost:8000/addArtist`, {
+    fetch(`https://beauty-saloon.herokuapp.com/addArtist`, {
       method: "POST",
+      headers : { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
       body: formData,
     })
       .then((response) => response.json())

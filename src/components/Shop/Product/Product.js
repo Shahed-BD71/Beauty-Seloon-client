@@ -8,23 +8,35 @@ const Product = ({addProduct}) => {
   console.log(products);
 
   useEffect(() => {
-    fetch(`http://localhost:8000/products`)
+    fetch(`http://beauty-saloon.herokuapp.com/products`)
       .then((res) => res.json())
       .then((data) => setProducts(data));
-  }, [products]);
+  }, []);
 
   return (
     <section className="col-md-7 col-7">
       <h3 className="text-center fw-bolder text-brand mt-5">
         Try Our Products
       </h3>
-      {products.map((pd) => (
-        <ProductDetails
-          pd={pd}
-          addProduct={addProduct}
-          key={pd._id}
-        ></ProductDetails>
-      ))}
+      {products.length !== 0 ? (
+        products.map((pd) => (
+          <ProductDetails
+            pd={pd}
+            addProduct={addProduct}
+            key={pd._id}
+          ></ProductDetails>
+        ))
+      ) : (
+        <div style={{ textAlign: "center", border: "none" }}>
+          <div class="loadingio-spinner-pulse-pcfqenj96f">
+            <div class="ldio-02fa0calvywk">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

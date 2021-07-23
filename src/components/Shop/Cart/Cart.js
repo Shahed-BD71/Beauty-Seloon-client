@@ -8,8 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlusCircle, faMinusCircle } from "@fortawesome/free-solid-svg-icons";
 
 const Cart = ({ cartItems, addProduct, removeProduct }) => {
-  // const [cart, setCart] = useState([]);
-  // const savedCart = getDatabaseCart();
+  console.log(cartItems);
   const history = useHistory();
 
   const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
@@ -21,10 +20,9 @@ const Cart = ({ cartItems, addProduct, removeProduct }) => {
     history.push("/shipment");
   };
 
-  // ...
 
   return (
-    <aside className="col-md-4 col-5 cart mt-5 rounded">
+    <aside className="col-md-4 sticky-top col-5 mt-5 rounded">
       <h5 className="text-center fw-bold text-brand">Your Shopping Details</h5>
       <h5 className="text-center">
         {cartItems.length === 0 && <p>Cart is Empty</p>}

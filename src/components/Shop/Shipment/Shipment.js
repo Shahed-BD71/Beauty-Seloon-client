@@ -32,7 +32,7 @@ const Shipment = () => {
     };
 
 
-    fetch(`http://localhost:8000/addOrder`, {
+    fetch(`https://beauty-saloon.herokuapp.com/addOrder`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

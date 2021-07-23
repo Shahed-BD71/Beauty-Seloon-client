@@ -51,7 +51,7 @@ const Beautician = () => {
   console.log(artists);
 
   useEffect(() => {
-    fetch(`http://localhost:8000/artists`)
+    fetch(`https://beauty-saloon.herokuapp.com/artists`)
       .then((res) => res.json())
       .then((data) => setArtists(data));
   }, []);
@@ -69,9 +69,20 @@ const Beautician = () => {
       </div>
       <div className="d-flex justify-content-center">
         <div className="row mx-5 py-4">
-          {artists.map((artist) => (
-            <BeauticianDetails artist={artist}></BeauticianDetails>
-          ))}
+          {artists.length !== 0 ? (
+            artists.map((artist) => (
+              <BeauticianDetails artist={artist}></BeauticianDetails>
+            ))
+            ) : (
+            <div class="loadingio-spinner-dual-ring-qlmdv3qjtx">
+              <div class="ldio-zeqa7nuzur">
+                <div></div>
+                <div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </section>
