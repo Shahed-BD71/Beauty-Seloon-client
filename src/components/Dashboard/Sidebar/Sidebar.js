@@ -56,7 +56,12 @@ const Sidebar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/addDoctor" className="text-white">
+              <Link to="/addArtist" className="text-white">
+                <FontAwesomeIcon icon={faUserPlus} /> <span>Add An Artist</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/addProduct" className="text-white">
                 <FontAwesomeIcon icon={faUserPlus} /> <span>Add An Artist</span>
               </Link>
             </li>
@@ -70,7 +75,7 @@ const Sidebar = () => {
       </ul>
       <div>
         <Link to="/" className="text-white">
-          <FontAwesomeIcon icon={faSignOutAlt}/> <span>Logout</span>
+          <FontAwesomeIcon icon={faSignOutAlt} /> <span>Logout</span>
         </Link>
       </div>
     </div>

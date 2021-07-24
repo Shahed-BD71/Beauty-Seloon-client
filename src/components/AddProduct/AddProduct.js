@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Sidebar from "../Dashboard/Sidebar/Sidebar";
 // import Sidebar from "../Dashboard/Sidebar/Sidebar";
 
 const AddProduct = () => {
@@ -42,9 +43,16 @@ const AddProduct = () => {
 
   return (
     <section className="container-fluid row">
+      <div style={{ marginLeft: "-23px" }} className="col-md-2 me-5 col-2">
+        <Sidebar />
+      </div>
       <div
-        className="col-md-8 p-4 pr-5"
-        style={{ position: "absolute", right: 0, backgroundColor: "#F4FDFB" }}
+        className="col-md-5 me-5 col-8 p-4 pr-5"
+        style={{
+          marginTop: "10px",
+          marginLeft: "145px",
+          backgroundColor: "#F4FDFB",
+        }}
       >
         <h5 className="text-brand">Add a New Product</h5>
         <form onSubmit={handleSubmit}>

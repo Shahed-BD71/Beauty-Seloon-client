@@ -30,7 +30,10 @@ const Navbar = ({ countCartItems, name, handleLogOut}) => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <ul className="navbar-nav ms-auto hover-nav fw-bolder">
+          <ul
+            style={{ marginRight: "10px", marginLeft: "10px" }}
+            className="navbar-nav ms-auto hover-nav fw-bolder"
+          >
             <li className="nav-item">
               <NavLink
                 className="nav-link active"
@@ -42,7 +45,11 @@ const Navbar = ({ countCartItems, name, handleLogOut}) => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link active text-dark" exact to="/appointment">
+              <NavLink
+                className="nav-link active text-dark"
+                exact
+                to="/appointment"
+              >
                 Appointment
               </NavLink>
             </li>

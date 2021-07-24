@@ -4,16 +4,16 @@
     height:800px;
     background-size: cover;
     z-index: 1;
-    margin-right: 0px;
+    right: 0;
 }
 
 .subscribe::before{
     position: absolute;
     content: "";
     top:0;
-    margin-right: 0px;
     width: 100%;
     height: 100%;
+    right: 0;
     background: rgb(12, 11, 27);
     opacity: .9;
     z-index: -1;

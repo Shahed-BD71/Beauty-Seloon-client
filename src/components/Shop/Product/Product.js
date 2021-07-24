@@ -8,7 +8,7 @@ const Product = ({addProduct}) => {
   console.log(products);
 
   useEffect(() => {
-    fetch(`http://beauty-saloon.herokuapp.com/products`)
+    fetch(`https://beauty-saloon.herokuapp.com/products`)
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);

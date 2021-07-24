@@ -46,15 +46,15 @@ const AddArtist = () => {
   };
 
   return (
-    <section className="container-fluid row">
+    <section style={{Right: "0px"}} className="container-fluid row">
       <div style={{ marginLeft: "-23px" }} className="col-md-2 me-5 col-2">
         <Sidebar></Sidebar>
       </div>
       <div
-        className="col-md-4 p-4 col-10"
+        className="col-md-4 p-4 col-9"
         style={{
           marginTop: "10px",
-          marginLeft: "125px",
+          marginLeft: "145px",
           backgroundColor: "#F4FDFB",
         }}
       >
