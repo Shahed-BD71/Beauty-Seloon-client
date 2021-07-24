@@ -3,7 +3,7 @@ import './LoginForm.css';
 
 const LoginForm = ({name, nameError, setName, email, password,setEmail, setPassword, handleLogIn, handleSignUp, passwordError, emailError, hasAccount, setHasAccount, googleSignIn}) => {
    return (
-     <section className="login mt-5 mb-5 row">
+     <section className="login mt-5 mb-5">
        <div className="loginContainer">
          {!hasAccount ? (
            <div>

@@ -4,9 +4,9 @@ import './ProductDetails.css'
 const ProductDetails = ({pd, addProduct}) => {
 
   return (
-    <div className="m-3">
+    <div>
       <img
-        className="pd-img img-fluid mx-auto rounded"
+        className="pd-img img-fluid rounded"
         src={`data:image/png;base64,${pd.image.img}`}
         alt={pd.name}
       ></img>

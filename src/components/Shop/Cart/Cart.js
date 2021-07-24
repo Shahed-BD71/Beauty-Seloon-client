@@ -22,7 +22,7 @@ const Cart = ({ cartItems, addProduct, removeProduct }) => {
 
 
   return (
-    <aside className="col-md-4 sticky-top col-5 mt-5 rounded">
+    <aside className="col-md-4 sticky-top cart col-5 rounded">
       <h5 className="text-center fw-bold text-brand">Your Shopping Details</h5>
       <h5 className="text-center">
         {cartItems.length === 0 && <p>Cart is Empty</p>}

@@ -33,8 +33,7 @@ const blogData = [
 
 const BLogs = () => {
   return (
-    <section className="blogs mt-5">
-      <div className="container">
+    <section className="blogs mx-5">
         <div className="section-header text-center">
           <h5 style={{ color: "#127a1d" }}>OUR BLOG</h5>
           <h2 style={{ color: "#203047" }}>From Our Blog News</h2>
@@ -44,7 +43,6 @@ const BLogs = () => {
             <BlogPost blog={blog} key={blog.title}></BlogPost>
           ))}
         </div>
-      </div>
     </section>
   );
 };

@@ -46,25 +46,25 @@ function App() {
             <Subscribe></Subscribe>
           </Route>
           <Route exact path="/blogs">
-            <BLogs/>
+            <BLogs />
           </Route>
           <Route exact path="/login">
             <Login />
           </Route>
-          <Route exact path="/dashboard">
+          <PrivateRoute exact path="/dashboard">
             <Dashboard />
-          </Route>
-          <PrivateRoute exact path="/addproduct">
-            <AddProduct />
-          </PrivateRoute>
-          <Route exact path="/addartist">
-            <AddArtist />
-          </Route>
-          <PrivateRoute path="/allclients">
-            <AllClients />
           </PrivateRoute>
           <PrivateRoute exact path="/shipment">
             <Shipment />
+          </PrivateRoute>
+          <PrivateRoute exact path="/addproduct">
+            <AddProduct />
+          </PrivateRoute>
+          <PrivateRoute exact path="/addartist">
+            <AddArtist />
+          </PrivateRoute>
+          <PrivateRoute path="/allclients">
+            <AllClients />
           </PrivateRoute>
           <Route exact path="/*">
             <NotFound />

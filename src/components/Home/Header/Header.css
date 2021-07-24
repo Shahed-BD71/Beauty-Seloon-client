@@ -2,8 +2,8 @@
     background-image: url(../../../images/bgImage.jpg);
     position: relative;
     background-size: cover;
-    z-index: 1;
-    margin-right: 0px;
+    z-index: 1; 
+    margin-right: 0 !important;
 }
 
 .header-container::before{
@@ -16,4 +16,5 @@
     background: rgb(12, 11, 27);
     opacity: .8;
     z-index: -9; 
+    margin-right: 0 !important;
 };

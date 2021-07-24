@@ -8,7 +8,7 @@ const testimonialData = [
   {
     quote:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic non architecto nobis, adipisci recusandae repellat accusantium consequuntur, qui nisi deserunt blanditiis mollitia, illo! ",
-    name: "Henry Bins",
+    name: "Mitsuha Morello",
     from: "California",
     img: Mitsuha,
   },
@@ -31,19 +31,17 @@ const testimonialData = [
 const Testimonial = () => {
   return (
     <section className="testimonials my-5 py-5">
-      <div className="container">
-        <div className="section-header">
+        <div className="mx-5">
           <h5 style={{ color: "#6ACECE" }}>TESTIMONIAL</h5>
           <h2 style={{ color: "#203047" }}>
             What’s Our Clients<br></br>Says
           </h2>
         </div>
-        <div className="card-group mt-5">
+        <div className="card-group mx-5">
           {testimonialData.map((testimonial) => (
             <TestimonialDetails testimonial={testimonial}></TestimonialDetails>
           ))}
         </div>
-      </div>
     </section>
   );
 };

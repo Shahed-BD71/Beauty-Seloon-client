@@ -12,6 +12,10 @@
   color: #7ef5b5;
 }
 
+*{
+  margin-right: 0 !important;
+}
+
 /*Shop Page spinner */
 @keyframes ldio-02fa0calvywk-1 {
   0% { top: 36px; height: 128px }

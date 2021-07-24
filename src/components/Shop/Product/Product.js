@@ -15,7 +15,7 @@ const Product = ({addProduct}) => {
 
   return (
     <section className="col-md-7 col-7">
-      <h3 className="text-center fw-bolder text-brand mt-5">
+      <h3 className="text-center fw-bolder text-brand">
         Try Our Products
       </h3>
       {products.length !== 0 ? (

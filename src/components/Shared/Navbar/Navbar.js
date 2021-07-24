@@ -92,7 +92,7 @@ const Navbar = ({ countCartItems, name, handleLogOut}) => {
                   <span>Registration</span>
                 )}
               </NavLink>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 {userName || name ? (
                   <li className="">
                     <NavLink class="dropdown-item" exact to="">

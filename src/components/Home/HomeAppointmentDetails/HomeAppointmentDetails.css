@@ -59,19 +59,6 @@
   transition: 1.5s ease;
 }
 
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  .home-app .card-body {
-   position: absolute;
-   bottom: 0;
-   left: 0;
-   right: 0;
-   height: 16%;
-   background-color: #fff;
-   transition: 1.5s ease;
-  }
-}
-
 .home-app .card-content {
   left: 0;
   right: 0;
@@ -80,18 +67,40 @@
   height: auto;
   transition: 1.5s ease;
 }
+
+.home-app .card:hover .card-content {
+  bottom: 0;
+}
 .home-app .card:hover .card-body {
   height: 68%;
-}
+ }
 
+
+/* Mobile Device Responsive */
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
 .home-app .card:hover .card-body {
    height: auto;
   }
+  .home-app .card-content {
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  transition: 1.5s ease;
 }
+.home-app .card:hover .card-body {
+  height: 27%;
+ }
 
-
-.home-app .card:hover .card-content {
-  bottom: 0;
+.home-app .card-body {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   height: 16%;
+   background-color: #fff;
+   transition: 1.5s ease;
+  } 
 }

@@ -4,12 +4,11 @@ import "./Subscribe.css"
 const Subscribe = () => {
   return (
     <section className="subscribe my-5 py-5">
-      <div className="container">
-        <div className="section-header text-center mb-5">
+        <div className="text-center mb-4">
           <h4 className="text-primary">Contact</h4>
           <h1 className="text-white">Always connect with us</h1>
         </div>
-        <div className="col-md-9 p-3 mx-auto">
+        <div className="col-md-6 px-4 mx-auto">
           <form action="">
             <div className="mb-4">
               <input
@@ -43,7 +42,6 @@ const Subscribe = () => {
             </div>
           </form>
         </div>
-      </div>
     </section>
   );
 };

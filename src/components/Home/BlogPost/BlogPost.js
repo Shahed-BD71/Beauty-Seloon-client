@@ -8,8 +8,8 @@ import {
 const BlogPost = (props) => {
   const { title, description, author, authorImg, date } = props.blog;
   return (
-    <div className="card shadow-sm">
-      <div className="card-header d-flex  align-items-center">
+    <div className="card m-2 shadow-sm">
+      <div className="card-header d-flex align-items-center">
         <img className="mx-3" src={authorImg} alt="" width="90px" />
         <div>
           <h6 className="text-primary">{author}</h6>
