@@ -36,8 +36,8 @@ const Footer = () => {
       {name: "Yards" , link: "//google.com/map"}
   ]
    return (
-     <footer className="footer-area group">
-       <div className="mx-5 pt-3">
+     <footer className="footer-area ms-3">
+       <div className="justify-content-center pt-3">
          <div className="row py-5">
            <FooterCol key={1} menuTitle={"."} menuItems={noNamed} />
            <FooterCol key={2} menuTitle="Services" menuItems={services} />

@@ -43,11 +43,11 @@ const fashionData = [
 const Fashion = () => {
   return (
     <section className="">
-      <div className="text-center">
+      <div className="text-center mx-2">
         <h1 style={{ color: "black", fontWeight: "700" }}>
           Fashion Inspirations
         </h1>
-        <hr style={{border: "1px dashed #000", width: "35%",  margin: "auto", marginTop: "1%",  marginBottom: "1%" }}></hr>
+        <hr style={{border: "1px dashed #000",width: "45%", marginLeft: "29%", marginTop: "1%",  marginBottom: "1%" }}></hr>
         <span style={{ color: "#3A4256" }}>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy eirmod tempor invidunt ut labore et dolore.

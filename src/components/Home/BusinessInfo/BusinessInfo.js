@@ -30,7 +30,7 @@ const infosData = [
 const BusinessInfo = () => {
   return (
     <section className="">
-      <div className="row justify-content-center mx-5">
+      <div className="row justify-content-center mx-3">
         {infosData.map((info) => (
           <InfoCard info={info} key={info.title}></InfoCard>
         ))}

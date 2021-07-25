@@ -33,7 +33,7 @@ const blogData = [
 
 const BLogs = () => {
   return (
-    <section className="blogs mx-5">
+    <section className="blogs m-3">
         <div className="section-header text-center">
           <h5 style={{ color: "#127a1d" }}>OUR BLOG</h5>
           <h2 style={{ color: "#203047" }}>From Our Blog News</h2>

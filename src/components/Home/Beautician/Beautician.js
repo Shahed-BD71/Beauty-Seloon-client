@@ -57,7 +57,7 @@ const Beautician = () => {
   }, []);
 
   return (
-    <section className="mt-5 py-5">
+    <section className="mt-5 m-3 py-5">
       <div className="text-center">
         <h1 style={{ color: "#b236d1", fontWeight: "700" }}>
           Expert Beautician
@@ -68,7 +68,7 @@ const Beautician = () => {
         </p>
       </div>
       <div className="d-flex justify-content-center">
-        <div className="row mx-5 py-4">
+        <div className="row mx-3 py-4">
           {artists.length !== 0 ? (
             artists.map((artist) => (
               <BeauticianDetails artist={artist}></BeauticianDetails>

@@ -30,14 +30,12 @@ const testimonialData = [
 
 const Testimonial = () => {
   return (
-    <section className="testimonials my-5 py-5">
-        <div className="mx-5">
+    <section className="testimonials my-5 m-3 py-5">
           <h5 style={{ color: "#6ACECE" }}>TESTIMONIAL</h5>
           <h2 style={{ color: "#203047" }}>
             What’s Our Clients<br></br>Says
           </h2>
-        </div>
-        <div className="card-group mx-5">
+        <div className="card-group">
           {testimonialData.map((testimonial) => (
             <TestimonialDetails testimonial={testimonial}></TestimonialDetails>
           ))}
