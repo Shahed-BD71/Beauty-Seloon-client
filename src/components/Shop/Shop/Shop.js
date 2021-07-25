@@ -44,11 +44,15 @@ const Shop = () => {
   return (
     <main className="">
       <Navbar countCartItems={cartItems.length}></Navbar>
-        <div className="row m-5 justify-content-between d-flex">
-          <Product addProduct={addProduct}></Product>
-          <Cart cartItems={cartItems} addProduct={addProduct} removeProduct={removeProduct}></Cart>
-          <Footer/>
-        </div>
+      <div className="row my-5 mx-2 justify-content-between d-flex">
+        <Product addProduct={addProduct}></Product>
+        <Cart
+          cartItems={cartItems}
+          addProduct={addProduct}
+          removeProduct={removeProduct}
+        ></Cart>
+      </div>
+      <Footer />
     </main>
   );
 };
