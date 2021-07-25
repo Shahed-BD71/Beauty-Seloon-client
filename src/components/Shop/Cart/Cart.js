@@ -22,7 +22,7 @@ const Cart = ({ cartItems, addProduct, removeProduct }) => {
 
 
   return (
-    <aside className="col-md-4 sticky-top cart col-5 rounded">
+    <aside className="col-md-4 sticky-top col-5 rounded">
       <h5 className="text-center fw-bold text-brand">Your Shopping Details</h5>
       <h5 className="text-center">
         {cartItems.length === 0 && <p>Cart is Empty</p>}
@@ -52,7 +52,7 @@ const Cart = ({ cartItems, addProduct, removeProduct }) => {
                 <FontAwesomeIcon icon={faMinusCircle}></FontAwesomeIcon>
               </button>
               <button
-                className="m-2"
+                className="m-1"
                 style={{
                   height: "30px",
                   width: "30px",
