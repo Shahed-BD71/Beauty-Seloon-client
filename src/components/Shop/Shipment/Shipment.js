@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import "./Shipment.css";
 import { useContext } from "react";
-import { UserContext } from "../../../App";
+import { CartContext, UserContext } from "../../../App";
 import { getDatabaseCart, processOrder } from "../../../utilities/databaseManager";
 import ProcessPayment from "./ProcessPayment/ProcessPayment";
+const user = JSON.parse(localStorage.getItem('user'));
 
 const Shipment = () => {
   const { register, handleSubmit} = useForm();
@@ -16,21 +17,18 @@ const Shipment = () => {
 };
 
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-  console.log(loggedInUser)
+  const [cartItems,setCartItems] = useContext(CartContext);
+  console.log(cartItems)
   const [shippingData, setShippingData] = useState(null);
 
   const handlePaymentSuccess = (paymentId) => {
-    console.log("submitted", shippingData);
-    const savedCart = getDatabaseCart();
-    console.log(savedCart)
     const orderDetails = {
-      ...loggedInUser,
-      products: savedCart,
+      ...user,
+      products: cartItems,
       shipment: shippingData,
       paymentId,
       orderTime: new Date(),
     };
-
 
     fetch(`https://beauty-saloon.herokuapp.com/addOrder`, {
       method: "POST",
@@ -41,11 +39,10 @@ const Shipment = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-       console.log(data)
-        if (data) {
-          processOrder();
+        console.log(data)
+        if(data) {
           alert("Successfully Order Done..");
-        } else {
+        }else {
           alert("Something Went Wrong, Try again");
         }
       });
@@ -66,7 +63,7 @@ const Shipment = () => {
           <input
             type="text"
             name="name"
-            defaultValue={loggedInUser.name}
+            defaultValue={user.name}
             {...register("name", { required: true })}
             placeholder="Your Name"
           />
@@ -75,7 +72,7 @@ const Shipment = () => {
           <input
             type="email"
             email="email"
-            defaultValue={loggedInUser.email}
+            defaultValue={user.email}
             {...register("email", { required: true })}
             placeholder="Your Email"
           />

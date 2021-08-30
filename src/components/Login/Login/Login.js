@@ -75,6 +75,7 @@ const handleGoogleSignIn = () => {
         success: true,
       };
       setUserToken();
+      localStorage.setItem('user', JSON.stringify(signedInUser));
       return signedInUser;
     })
     .catch((err) => {

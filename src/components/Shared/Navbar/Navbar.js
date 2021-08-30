@@ -1,14 +1,9 @@
 import React from "react";
 import { NavLink } from 'react-router-dom'
-import './Navbar.css'
-import { useContext } from "react";
-import { UserContext } from "../../../App";
-
-// const user = JSON.parse(localStorage.getItem('user-info'))
+import './Navbar.css';
+const user = JSON.parse(localStorage.getItem('user'))
 
 const Navbar = ({ countCartItems, name, handleLogOut}) => {
-  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-  let userName = loggedInUser.name;
   return (
     <nav
       style={{ backgroundColor: "rgb(37, 150, 190)" }}
@@ -86,17 +81,19 @@ const Navbar = ({ countCartItems, name, handleLogOut}) => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                {userName || name ? (
-                  userName || name
+                {user.name || name ? (
+                  user.name || name
                 ) : (
                   <span>Registration</span>
                 )}
               </NavLink>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                {userName || name ? (
+                {user.name || name ? (
                   <li className="">
-                    <NavLink class="dropdown-item" exact to="">
-                      <span onClick={handleLogOut}>Sign Out</span>
+                    <NavLink class="dropdown-item" to='/logout'>
+                      <span onClick={handleLogOut}>
+                         Logout
+                     </span>
                     </NavLink>
                   </li>
                 ) : (

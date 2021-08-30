@@ -20,14 +20,17 @@ import AddArtist from './components/AddArtist/AddArtist';
 import AllClients from './components/AllClients/AllClients';
 import Subscribe from './components/Home/Subscribe/Subscribe';
 import BLogs from './components/Home/Blogs/Blogs';
+import LogOut from './components/Login/Login/LogOut';
 
 export const UserContext = createContext();
+export const CartContext = createContext();
 
 function App() {
- const [loggedInUser, setLoggedInUser, cartItems] = useState({});
- console.log(cartItems)
+ const [loggedInUser, setLoggedInUser] = useState({});
+ const [cartItems,setCartItems] = useState([]);
   return (
-    <UserContext.Provider value={[loggedInUser, setLoggedInUser, cartItems]}>
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+    <CartContext.Provider value={[cartItems,setCartItems]}>
       <Router>
         <Switch>
           <Route exact path="/">
@@ -66,11 +69,16 @@ function App() {
           <PrivateRoute path="/allclients">
             <AllClients />
           </PrivateRoute>
+          <Route exact path="/logout">
+            <LogOut/>
+          </Route>
           <Route exact path="/*">
             <NotFound />
           </Route>
         </Switch>
       </Router>
+    </CartContext.Provider>
+      
     </UserContext.Provider>
   );
 }

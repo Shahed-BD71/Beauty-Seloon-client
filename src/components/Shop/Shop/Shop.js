@@ -3,10 +3,11 @@ import Footer from "../../Shared/Footer/Footer";
 import Navbar from "../../Shared/Navbar/Navbar";
 import Cart from "../Cart/Cart";
 import Product from "../Product/Product";
+import { useContext } from "react";
+import { CartContext } from "../../../App";
 
 const Shop = () => {
-  const [cartItems,setCartItems] = useState([]);
-
+  const [cartItems,setCartItems] = useContext(CartContext);
   const addProduct = (pd) => {
     const hasProduct = cartItems.find(x => x._id === pd._id);
     if (hasProduct) {
