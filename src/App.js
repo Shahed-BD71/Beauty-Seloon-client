@@ -6,10 +6,9 @@ import PrivateRoute from '../src/components/Login/PrivateRoute/PrivateRoute'
 import NotFound from './NotFound'
 import { createContext, useState} from "react";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import AddProduct from './components/AddProduct/AddProduct';
 import Shipment from './components/Shop/Shipment/Shipment';
