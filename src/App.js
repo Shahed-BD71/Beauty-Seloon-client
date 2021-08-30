@@ -28,7 +28,7 @@ function App() {
  const [cartItems,setCartItems] = useState([]);
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-      <CartContext.Provider value={[cartItems,setCartItems]}>
+      
         <Router>
           <Switch>
             <Route exact path="/">
@@ -70,12 +70,11 @@ function App() {
             <Route exact path="/logout">
               <LogOut/>
             </Route>
-            <Route exact path="/*">
+            <Route path="*">
               <NotFound />
             </Route>
           </Switch>
         </Router>
-      </CartContext.Provider>
     </UserContext.Provider>
   );
 }

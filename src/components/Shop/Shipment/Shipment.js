@@ -30,6 +30,8 @@ const Shipment = () => {
       orderTime: new Date(),
     };
 
+    console.log(orderDetails)
+
     fetch(`https://beauty-saloon.herokuapp.com/addOrder`, {
       method: "POST",
       headers: {
