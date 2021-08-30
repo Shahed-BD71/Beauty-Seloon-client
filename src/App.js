@@ -6,7 +6,7 @@ import PrivateRoute from '../src/components/Login/PrivateRoute/PrivateRoute'
 import NotFound from './NotFound'
 import { createContext, useState} from "react";
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
@@ -28,7 +28,7 @@ function App() {
  const [cartItems,setCartItems] = useState([]);
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-      
+      <CartContext.Provider value={[cartItems,setCartItems]}>
         <Router>
           <Switch>
             <Route exact path="/">
@@ -75,6 +75,7 @@ function App() {
             </Route>
           </Switch>
         </Router>
+      </CartContext.Provider>
     </UserContext.Provider>
   );
 }
